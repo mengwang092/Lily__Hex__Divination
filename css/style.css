@@ -1,0 +1,600 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  font-size: 16px; }
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  line-height: 1; }
+
+a,
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: #000; }
+
+.pink {
+  color: #FF3C82; }
+
+.blue {
+  color: #0027C8; }
+
+.lightBlue {
+  color: #1469FF; }
+
+.black {
+  color: #000; }
+
+.white {
+  color: #fff; }
+
+.bg-pink {
+  background-color: #FF3C82; }
+
+.bg-blue {
+  background-color: #0027C8; }
+
+.bg-lightBlue {
+  background-color: #1469FF; }
+
+.bg-black {
+  background-color: #000; }
+
+.bg-white {
+  background-color: #fff; }
+
+.test {
+  position: relative;
+  left: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  z-index: 2; }
+
+.shape-triangle {
+  position: absolute;
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  width: 0;
+  height: 0;
+  border-left: 180px solid transparent;
+  border-right: 180px solid transparent;
+  border-bottom: 300px solid #FF3C82;
+  z-index: 2; }
+  .shape-triangle:nth-child(2) {
+    top: -120px;
+    -webkit-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+    transform: rotate(-180deg); }
+
+.shape-circle {
+  width: 550px;
+  height: 550px;
+  background-color: #0027C8;
+  border-radius: 100%;
+  z-index: 1; }
+
+.shape-square {
+  position: absolute;
+  width: 460px;
+  height: 460px;
+  background-color: #000;
+  z-index: 0; }
+
+.spin-right {
+  -webkit-animation-name: spin-right;
+  animation-name: spin-right;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@-webkit-keyframes spin-right {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+@keyframes spin-right {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.spin-left {
+  -webkit-animation-name: spin-left;
+  animation-name: spin-left;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@-webkit-keyframes spin-left {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+@keyframes spin-left {
+  from {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  to {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg); } }
+
+.bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-animation-duration: 6s;
+  animation-duration: 6s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; }
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  33% {
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12); }
+  66% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1); }
+  33% {
+    -webkit-transform: scale(1.12);
+    transform: scale(1.12); }
+  66% {
+    -webkit-transform: scale(0.95);
+    transform: scale(0.95); }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+.floating {
+  -webkit-animation-name: floating;
+  animation-name: floating;
+  -webkit-animation-duration: 6000ms;
+  animation-duration: 6000ms;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-transition-timing-function: linear;
+  -o-transition-timing-function: linear;
+  transition-timing-function: linear;
+  -webkit-transform: translate(0px);
+  -ms-transform: translate(0px);
+  transform: translate(0px); }
+
+@-webkit-keyframes floating {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); } }
+
+@keyframes floating {
+  0% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); }
+  50% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px); } }
+
+.landing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #1469FF; }
+
+.shape {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.intro {
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  color: #fff; }
+  .intro-title {
+    display: block;
+    font-size: 4rem;
+    margin-bottom: 8px;
+    font-weight: bold; }
+  .intro-text {
+    font-size: 1.6rem; }
+
+.QAwrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 10% 0;
+  width: 60%;
+  background-color: #1469FF; }
+
+.QAarea {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 70%;
+  background-color: inherit; }
+  .QAarea h1 {
+    display: block;
+    font-weight: bold;
+    font-size: 4rem; }
+  .QAarea-quetions {
+    line-height: 1.6;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 24px; }
+  .QAarea-remind {
+    margin-bottom: 48px;
+    font-size: 1.5rem; }
+  .QAarea-ansGroup {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+    .QAarea-ansGroup .QAansBtn {
+      text-align: center;
+      border: 2px solid #fff;
+      padding: 1em 0;
+      border-radius: 30px;
+      font-size: 1.2rem;
+      color: #fff;
+      -webkit-transition: .3s;
+      -o-transition: .3s;
+      transition: .3s; }
+      .QAarea-ansGroup .QAansBtn:hover {
+        background-color: #fff;
+        color: #0027C8; }
+      .QAarea-ansGroup .QAansBtn + .QAansBtn {
+        margin-top: 1.2em; }
+
+.Shapewrap {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 40%;
+  background-color: #0027C8; }
+
+.step1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh; }
+
+.step2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+  width: 100%;
+  height: 100vh; }
+  .step2 .QAwrap {
+    background-color: #0027C8; }
+  .step2 .Shapewrap {
+    background-color: #FF3C82; }
+
+.step3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh; }
+  .step3 .QAwrap {
+    background-color: #FF3C82; }
+  .step3 .Shapewrap {
+    background-color: #1469FF; }
+  .step3 .QAansBtn:hover {
+    color: #FF3C82; }
+
+.step-done {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #1469FF;
+  overflow: hidden; }
+  .step-done .Shapewrap {
+    width: unset;
+    background-color: unset; }
+
+.shape-position-1 {
+  position: relative;
+  overflow: hidden; }
+  .shape-position-1 .shape-square {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 180px;
+    height: 180px;
+    background-color: #FF3C82; }
+    .shape-position-1 .shape-square.spin-right {
+      -webkit-animation-duration: 5000ms;
+      animation-duration: 5000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-1 .shape-triangle {
+    position: absolute;
+    top: 45%;
+    right: -10%;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border-left: 90px solid transparent;
+    border-right: 90px solid transparent;
+    border-bottom: 140px solid #fff; }
+    .shape-position-1 .shape-triangle.spin-left {
+      -webkit-animation-duration: 5000ms;
+      animation-duration: 5000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-1 .shape-circle {
+    position: absolute;
+    bottom: -120px;
+    right: -50px;
+    width: 400px;
+    height: 400px;
+    background-color: #000; }
+
+.shape-position-2 {
+  position: relative;
+  overflow: hidden; }
+  .shape-position-2 .shape-triangle {
+    position: absolute;
+    left: 15%;
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 260px solid #fff; }
+    .shape-position-2 .shape-triangle.spin-right {
+      -webkit-animation-duration: 5000ms;
+      animation-duration: 5000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-2 .shape-square {
+    position: absolute;
+    top: 40%;
+    left: -35%;
+    background-color: #1469FF; }
+    .shape-position-2 .shape-square.spin-left {
+      -webkit-animation-duration: 5000ms;
+      animation-duration: 5000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-2 .shape-circle {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    width: 200px;
+    height: 200px;
+    background-color: #000; }
+
+.shape-position-3 {
+  position: relative;
+  overflow: hidden; }
+  .shape-position-3 .shape-circle {
+    position: absolute;
+    right: -15%;
+    top: -5%;
+    width: 300px;
+    height: 300px;
+    background-color: #fff; }
+  .shape-position-3 .shape-square {
+    position: absolute;
+    top: 10%;
+    left: 18%;
+    width: 360px;
+    height: 360px;
+    background-color: #0027C8; }
+    .shape-position-3 .shape-square.spin-left {
+      -webkit-animation-duration: 15000ms;
+      animation-duration: 15000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-3 .shape-triangle {
+    position: absolute;
+    bottom: 10%;
+    right: -15%;
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    border-bottom: 260px solid #000; }
+    .shape-position-3 .shape-triangle.spin-right {
+      -webkit-animation-duration: 6000ms;
+      animation-duration: 6000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+
+.shape-position-4 .shape-circle,
+.shape-position-4 .shape-square,
+.shape-position-4 .shape-triangle {
+  position: absolute;
+  z-index: 0; }
+  .shape-position-4 .shape-circle:nth-child(1),
+  .shape-position-4 .shape-square:nth-child(1),
+  .shape-position-4 .shape-triangle:nth-child(1) {
+    top: -5%;
+    left: -5%;
+    width: 200px;
+    height: 200px;
+    background-color: #fff; }
+  .shape-position-4 .shape-circle:nth-child(2),
+  .shape-position-4 .shape-square:nth-child(2),
+  .shape-position-4 .shape-triangle:nth-child(2) {
+    top: 35%;
+    left: 30%;
+    width: 300px;
+    height: 300px;
+    background-color: #0027C8; }
+  .shape-position-4 .shape-circle:nth-child(3),
+  .shape-position-4 .shape-square:nth-child(3),
+  .shape-position-4 .shape-triangle:nth-child(3) {
+    top: 20%;
+    right: 30%;
+    width: 350px;
+    height: 350px;
+    background-color: #000; }
+  .shape-position-4 .shape-circle:nth-child(4),
+  .shape-position-4 .shape-square:nth-child(4),
+  .shape-position-4 .shape-triangle:nth-child(4) {
+    bottom: -10%;
+    right: -10%;
+    width: 300px;
+    height: 300px;
+    background-color: #fff; }
+    .shape-position-4 .shape-circle:nth-child(4).spin-left,
+    .shape-position-4 .shape-square:nth-child(4).spin-left,
+    .shape-position-4 .shape-triangle:nth-child(4).spin-left {
+      -webkit-animation-duration: 15000ms;
+      animation-duration: 15000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-4 .shape-circle:nth-child(5),
+  .shape-position-4 .shape-square:nth-child(5),
+  .shape-position-4 .shape-triangle:nth-child(5) {
+    top: 50%;
+    left: -10%;
+    width: 280px;
+    height: 280px;
+    background-color: #FF3C82; }
+    .shape-position-4 .shape-circle:nth-child(5).spin-right,
+    .shape-position-4 .shape-square:nth-child(5).spin-right,
+    .shape-position-4 .shape-triangle:nth-child(5).spin-right {
+      -webkit-animation-duration: 6000ms;
+      animation-duration: 6000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-4 .shape-circle:nth-child(6),
+  .shape-position-4 .shape-square:nth-child(6),
+  .shape-position-4 .shape-triangle:nth-child(6) {
+    right: -11%;
+    top: 10%; }
+    .shape-position-4 .shape-circle:nth-child(6).spin-left,
+    .shape-position-4 .shape-square:nth-child(6).spin-left,
+    .shape-position-4 .shape-triangle:nth-child(6).spin-left {
+      -webkit-animation-duration: 5000ms;
+      animation-duration: 5000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }
+  .shape-position-4 .shape-circle:nth-child(7),
+  .shape-position-4 .shape-square:nth-child(7),
+  .shape-position-4 .shape-triangle:nth-child(7) {
+    bottom: 5%;
+    left: 5%;
+    border-left: 160px solid transparent;
+    border-right: 160px solid transparent;
+    border-bottom: 240px solid #000; }
+    .shape-position-4 .shape-circle:nth-child(7).spin-left,
+    .shape-position-4 .shape-square:nth-child(7).spin-left,
+    .shape-position-4 .shape-triangle:nth-child(7).spin-left {
+      -webkit-animation-duration: 10000ms;
+      animation-duration: 10000ms;
+      -webkit-animation-iteration-count: infinite;
+      animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear; }

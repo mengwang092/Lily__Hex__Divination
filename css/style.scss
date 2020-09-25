@@ -1,0 +1,595 @@
+// Colors
+// ----------------------------------
+$theme1 : #1469FF;
+$theme2 : #0027C8;
+$theme3 : #FF3C82;
+$black : #000;
+$white : #fff;
+
+
+
+// Basic settings
+// ----------------------------------
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+* {
+    box-sizing: border-box;
+    line-height: 1;
+}
+
+a,
+a:hover,
+a:active,
+a:visited {
+    text-decoration: none;
+    color: #000;
+}
+
+// text color
+.pink {
+    color: $theme3;
+}
+
+.blue {
+    color: $theme2;
+}
+
+.lightBlue {
+    color: $theme1;
+}
+
+.black {
+    color: $black;
+}
+
+.white {
+    color: $white;
+}
+
+// bg color
+.bg-pink {
+    background-color: $theme3;
+}
+
+.bg-blue {
+    background-color: $theme2;
+}
+
+.bg-lightBlue {
+    background-color: $theme1;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-white {
+    background-color: $white;
+}
+
+
+
+
+// Components
+// ----------------------------------
+.test {
+    position: relative;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.shape-triangle {
+    position: absolute;
+    transform: translateY(-30px);
+    width: 0; 
+    height: 0; 
+    border-left: 180px solid transparent;
+    border-right: 180px solid transparent;
+    
+    border-bottom: 300px solid $theme3;
+    z-index: 2;
+
+    &:nth-child(2) {
+        top: -120px;
+        transform: rotate(-180deg);
+    }
+}
+
+
+.shape-circle {
+    width: 550px;
+    height: 550px;
+    background-color: $theme2;
+    border-radius: 100%;
+    z-index: 1;
+}
+
+.shape-square {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    background-color: $black;
+    z-index: 0;
+}
+
+
+
+// Animation
+// ----------------------------------
+.spin-right {
+    animation-name: spin-right;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes spin-right {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
+}
+
+.spin-left {
+    animation-name: spin-left;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes spin-left {
+    from {
+        transform:rotate(360deg);
+    }
+    to {
+        transform:rotate(0deg);
+    }
+}
+
+.bounce {
+    animation-name: bounce;
+    animation-duration: 6s;
+    animation-iteration-count: 1;
+    transition-timing-function: ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+
+    33% {
+        transform: scale(1.12);
+    }
+
+    66% {
+        transform: scale(0.95);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.floating {
+    animation-name: floating;
+    animation-duration: 6000ms;
+    animation-iteration-count: infinite;
+    transition-timing-function: linear;
+    transform: translate(0px);
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0px)
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+
+// shape, intro
+// ----------------------------------
+.landing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-color: $theme1;
+}
+
+.shape {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro {
+    position: absolute;
+    z-index: 3;
+    text-align: center;
+    color: $white;
+
+    &-title {
+        display: block;
+        font-size: 4rem;
+        margin-bottom: 8px;
+        font-weight: bold;
+    }
+
+    &-text {
+        font-size: 1.6rem;
+    }
+}
+
+
+// QAarea
+// -----------------------------------
+.QAwrap {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 auto;
+    padding: 10% 0;
+    width: 60%;
+    background-color: $theme1;
+}
+
+.QAarea {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    background-color: inherit;
+
+    h1 {
+        display: block;
+        font-weight: bold;
+        font-size: 4rem;
+    }
+
+    &-quetions {
+        line-height: 1.6;
+        font-weight: bold;
+        font-size: 2rem;
+        margin-bottom: 24px;
+    }
+
+    &-remind {
+        margin-bottom: 48px;
+        font-size: 1.5rem;
+    }
+
+    &-ansGroup {
+        display: flex;
+        flex-direction: column;
+
+        .QAansBtn {
+            text-align: center;
+            border: 2px solid $white;
+            padding: 1em 0;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            color: $white;
+            transition: .3s;
+
+            &:hover {
+                background-color: $white;
+                color: $theme2;
+            }
+
+            & + .QAansBtn {
+                margin-top: 1.2em;
+            }
+        }
+    }
+}
+
+.Shapewrap {
+    flex: 1 1 auto;
+    width: 40%;
+    background-color: $theme2;
+}
+
+.step1 {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100vh;
+}
+
+.step2 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    height: 100vh;
+
+    .QAwrap {
+        background-color: $theme2;
+    }
+
+    .Shapewrap {
+        background-color: $theme3;
+    }
+}
+
+.step3 {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+
+    .QAwrap {
+        background-color: $theme3;
+    }
+
+    .Shapewrap {
+        background-color: $theme1;
+    }
+
+    .QAansBtn {
+        &:hover { color: $theme3; }
+    }
+}
+
+
+.step-done {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-color: $theme1;
+    overflow: hidden;
+
+    .Shapewrap {
+        width: unset;
+        background-color: unset;
+    }
+}
+
+
+
+// shape-positions
+// -------------------------------------
+.shape-position-1 {
+    position: relative;
+    overflow: hidden;
+
+    .shape-square {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 180px;
+        height: 180px;
+        background-color: $theme3;
+
+        &.spin-right {
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+
+    .shape-triangle {
+        position: absolute;
+        top: 45%;
+        right: -10%;
+        transform: rotate(0deg);
+        border-left: 90px solid transparent;
+        border-right: 90px solid transparent;
+
+        border-bottom: 140px solid $white;
+
+        &.spin-left {
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+
+    .shape-circle {
+        position: absolute;
+        bottom: -120px;
+        right: -50px;
+        width: 400px;
+        height: 400px;
+        background-color: $black;
+    }
+}
+
+
+.shape-position-2 {
+    position: relative;
+    overflow: hidden;
+
+    .shape-triangle {
+        position: absolute;
+        left: 15%;
+        transform: rotate(0deg);
+        border-left: 180px solid transparent;
+        border-right: 180px solid transparent;
+
+        border-bottom: 260px solid $white;
+
+        &.spin-right {
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+
+    .shape-square {
+        position: absolute;
+        top: 40%;
+        left: -35%;
+        background-color: $theme1;
+
+        &.spin-left {
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+
+    .shape-circle {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        width: 200px;
+        height: 200px;
+        background-color: $black;
+    }
+}
+
+
+.shape-position-3 {
+    position: relative;
+    overflow: hidden;
+
+    .shape-circle {
+        position: absolute;
+        right: -15%;
+        top: -5%;
+        width: 300px;
+        height: 300px;
+        background-color: $white;
+    }
+
+    .shape-square {
+        position: absolute;
+        top: 10%;
+        left: 18%;
+        width: 360px;
+        height: 360px;
+        background-color: $theme2;
+
+        &.spin-left {
+            animation-duration: 15000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+
+    .shape-triangle {
+        position: absolute;
+        bottom: 10%;
+        right: -15%;
+
+        border-left: 180px solid transparent;
+        border-right: 180px solid transparent;
+
+        border-bottom: 260px solid $black;
+
+        &.spin-right {
+            animation-duration: 6000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; 
+        }
+    }
+}
+
+
+.shape-position-4 {
+
+    .shape-circle,
+    .shape-square,
+    .shape-triangle {
+        position: absolute;
+        z-index: 0;
+
+        &:nth-child(1) {
+            top: -5%;
+            left: -5%;
+            width: 200px;
+            height: 200px;
+            background-color: $white;
+        }
+    
+        &:nth-child(2) {
+            top: 35%;
+            left: 30%;
+            width: 300px;
+            height: 300px;
+            background-color: $theme2;
+        }
+    
+        &:nth-child(3) {
+            top: 20%;
+            right: 30%;
+            width: 350px;
+            height: 350px;
+            background-color: $black;
+        }
+    
+        &:nth-child(4) {
+            bottom: -10%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background-color: $white;
+
+            &.spin-left {
+                animation-duration: 15000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear; 
+            }
+        }
+    
+        &:nth-child(5) {
+            top: 50%;
+            left: -10%;
+            width: 280px;
+            height: 280px;
+            background-color: $theme3;
+
+            &.spin-right {
+                animation-duration: 6000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear; 
+            }
+        }
+
+        &:nth-child(6) {
+            right: -11%;
+            top: 10%;
+
+            &.spin-left {
+                animation-duration: 5000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear; 
+            }
+        }
+
+        &:nth-child(7) {
+            bottom: 5%;
+            left: 5%;
+            border-left: 160px solid transparent;
+            border-right: 160px solid transparent;
+
+            border-bottom: 240px solid $black;
+
+            &.spin-left {
+                animation-duration: 10000ms;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear; 
+            }
+        }
+    }
+}
